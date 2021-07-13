@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/dda41994d4.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav_main">
+        <div class="nav_logo">
+            logo
+        </div>
+        <div class="nav_links">
+            <a href="/">
+                <h3>Home</h3>
+            </a>
+            <a href="/login">
+                <h3>Login</h3>
+            </a>
+            <a href="/registration">
+                <h3>Registration</h3>
+            </a>
+        </div>
+    </div>
+    <div class="mobile-nav-main" id="mobile-nav-main">
+        <div class="nav_logo">
+            logo
+        </div>
+        <i onclick="onoffmenu()" class="fas fa-bars bar" id="bar"></i>
+    </div>
+
+    <div class="mobile-nav-links-container" id="mobile-nav-links-container">
+        <div class="nav-main-mobile">
+            
+            <div class="nav_links-mobile">
+                <a href="/">
+                    <h3>Home</h3>
+                </a>
+                <a href="/login">
+                    <h3>Login</h3>
+                </a>
+                <a href="/registration">
+                    <h3>Registration</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    let count = 1;
+    let isBar = document.getElementById("mobile-nav-main");
+    let mobileMenu = document.getElementById("mobile-nav-links-container")
+    let bar = document.getElementById("bar");
+    console.log(bar);
+
+
+
+    const onoffmenu = () => {
+        count++
+
+        if (count % 2 === 0) {
+            mobileMenu.style.display = "block"
+            isBar.innerHTML = ` <div class="nav_logo">
+            logo
+        </div>
+        <i onclick="onoffmenu()" class="far fa-window-close bar"></i>
+        <div class="mobile-nav-links-container" id="mobile-nav-links-container">
+        </div>`
+        }
+        else {
+            mobileMenu.style.display = "none"
+            isBar.innerHTML = `<div class="nav_logo">
+            logo
+        </div>
+        <i onclick="onoffmenu()" class="fas fa-bars bar" id="bar"></i>
+        <div class="mobile-nav-links-container" id="mobile-nav-links-container">
+        </div>`
+        }
+    }
+</script>
+
+</html>
