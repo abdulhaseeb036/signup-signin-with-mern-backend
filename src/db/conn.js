@@ -1,7 +1,7 @@
 
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/form", {
+mongoose.connect(process.env.SECRET_DB_PATH, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
