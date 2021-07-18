@@ -52,6 +52,19 @@ h1 {
     display: none;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #f0f0f0;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #f0f0f0;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #f0f0f0;
+  }
+
 /* Responsive */
 @media only screen and (max-width: 720px) {
     .nav_main {
